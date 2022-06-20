@@ -249,7 +249,7 @@ def user_stats(df):
     print('\n')
 
 def view_data(df):
-    """Displays data to the user on request"""
+    """Displays raw data to the user on request"""
     continue_loop = True
 
     while continue_loop:
@@ -259,7 +259,7 @@ def view_data(df):
         if show_data == 'yes':
             start_row=0
             continue_loop = False
-            
+
             while show_data == 'yes':
                 print (df.iloc[start_row:start_row+5])
                 show_data = input("Would you like to see the next 5 rows of data? Enter yes or no\n").lower()
@@ -267,6 +267,8 @@ def view_data(df):
 
         elif show_data = 'no':
             continue_loop = False
+        else:
+            print("Your input was not recognised. Please try again")
     
 
     
