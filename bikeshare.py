@@ -256,15 +256,25 @@ def user_stats(df):
 
 def view_data(df):
     """Displays data to the user on request"""
-    show_data = input("Would you like to see the first 5 rows of data? Enter yes or no\n").lower()
+    continue_loop = True
+
+    while continue_loop:
+
+        show_data = input("Would you like to see the first 5 rows of data? Enter yes or no\n").lower()
     
-    if show_data == 'yes':
-        start_row=0
-        
-        while show_data == 'yes':
-            print (df.iloc[start_row:start_row+5])
-            show_data = input("Would you like to see the next 5 rows of data? Enter yes or no\n").lower()
-            start_row=start_row+5
+        if show_data == 'yes':
+            start_row=0
+            continue_loop = False
+            
+            while show_data == 'yes':
+                print (df.iloc[start_row:start_row+5])
+                show_data = input("Would you like to see the next 5 rows of data? Enter yes or no\n").lower()
+                start_row=start_row+5
+
+        elif show_data = 'no':
+            continue_loop = False
+    
+
     
 
 def main():
