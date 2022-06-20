@@ -98,7 +98,15 @@ def load_data(city):
     return df
 
 def get_month_options(df):
+    """
+    Checks city csv file to get list of months for which there is data. This list can be used for input options
+
+    args:
+        (df) Dataframe of the city csv data
+    Returns:
+        month_options - list of months in data
     
+    """
     months_in_data = list(set(df['month']))
     
     month_options=[]
