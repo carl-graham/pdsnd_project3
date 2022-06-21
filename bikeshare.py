@@ -271,7 +271,7 @@ def view_data(df):
                 show_data = input("Would you like to see the next 5 rows of data? Enter yes or no\n").lower()
                 start_row=start_row+5
 
-        elif show_data = 'no':
+        elif show_data == 'no':
             continue_loop = False
         else:
             print("Your input was not recognised. Please try again")
